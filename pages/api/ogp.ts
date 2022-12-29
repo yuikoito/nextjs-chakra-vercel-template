@@ -1,4 +1,4 @@
-import { Canvas, createCanvas, loadImage, registerFont } from "canvas";
+import { Canvas, createCanvas, loadImage } from "canvas";
 import { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
 
@@ -53,9 +53,6 @@ const createOgp = async (
   const canvas = createCanvas(WIDTH, HEIGHT);
 
   const ctx = canvas.getContext("2d");
-  registerFont(path.resolve("./src/fonts/NotoSansJP-Regular.otf"), {
-    family: "Noto",
-  });
 
   ctx.fillRect(DX, DY, WIDTH, HEIGHT);
   ctx.fillStyle = "#454545";
